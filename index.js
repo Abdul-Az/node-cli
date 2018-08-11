@@ -11,7 +11,7 @@ app.use('/data/uploads', express.static(__dirname + '/data/uploads'));
 app.use(morgan('dev'));
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
-// mongodb
+
 Module = require('./models/schema');
 mongoose.connect("mongodb://localhost:27017/sample", { useNewUrlParser: true });
 var db = mongoose.connection;
